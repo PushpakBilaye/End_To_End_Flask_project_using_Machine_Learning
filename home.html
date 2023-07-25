@@ -1,0 +1,50 @@
+<!--species	island	bill_length_mm	bill_depth_mm	flipper_length_mm	body_mass_g-->
+<html>
+
+</html>
+<head>
+    <h1>
+        <center>Penguin Classification</center>
+    </h1>
+</head>
+<body>
+<form action="/predict" method="post">  
+    <table>
+        <tr>
+            <td><h3>Bill_length_mm</h3></td>
+        <td><input type="text" name="bill_length_mm" required="required"></td>
+        </tr>
+        <tr>
+            <td><h3>Bill_depth_mm</h3></td>
+            <td><input type="text" name="bill_depth_mm" required="required"></td>
+        </tr>
+        <tr>
+            <td><h3>Flipper_length_mm</h3></td>
+            <td><input type="number" name="flipper_length_mm" required="required"></td>
+        </tr>
+        <tr>
+            <td><h3>Body_mass_g</h3></td>
+            <td><input type="number" name="body_mass_g" required="required"></td>
+        </tr>
+        <tr>
+            <td><h3>Island</h3></td>
+            <td><select name="island_Torgersen" required="required">
+                <option value="Torgersen">Torgersen</option>
+                <option value="Dream">Dream</option>
+                <option value="Biscoe">Biscoe</option>
+            </td>
+        </tr>
+        <tr>
+            <td><h3>Sex</h3></td>
+            <td><select name="sex_male" required="required">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </td>
+        </tr>
+        
+    </table>
+<br><br>
+<button type="submit">Species</button>
+</form>
+<br><br><h3>{{prediction_text}}</h3>
+</body>
